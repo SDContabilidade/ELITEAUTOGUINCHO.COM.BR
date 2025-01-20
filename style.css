@@ -30,7 +30,7 @@ body {
 }
 
 .logo img {
-    height: 80px; /* Tamanho reduzido para dispositivos menores */
+    height: 100px; /* Tamanho reduzido para dispositivos menores */
     margin: 0 auto; /* Centraliza a logo */
 }
 
