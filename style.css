@@ -14,10 +14,6 @@ body {
     align-items: center;
     margin: 0;
 }
-
-/* Cabeçalho */
-/* Cabeçalho */
-/* Estilos para o cabeçalho */
 .main-header {
     width: 100%;
     background-color: #000000;
@@ -30,26 +26,32 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    flex-wrap: wrap; /* Permite que os elementos sejam quebrados para a próxima linha */
 }
 
 .logo img {
-    height: 120px;
-    margin-left: 80px;
+    height: 80px; /* Tamanho reduzido para dispositivos menores */
+    margin: 0 auto; /* Centraliza a logo */
 }
 
 .contact-info {
     display: flex;
-    gap: 20px; /* Espaçamento maior entre os contatos */
-    font-size: 18px;
+    flex-wrap: wrap; /* Quebra os contatos para uma nova linha em telas menores */
+    gap: 10px;
+    font-size: 16px; /* Ajusta o tamanho da fonte para telas pequenas */
+    justify-content: center; /* Centraliza os contatos */
+    text-align: center;
+    margin-top: 10px;
 }
 
 .contact-info span {
     display: flex;
     align-items: center;
+    justify-content: center; /* Centraliza os ícones */
 }
 
 .contact-info i {
-    margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+    margin-right: 8px;
 }
 
 .contact-info a {
@@ -61,39 +63,83 @@ body {
     color: #dbdbdb;
 }
 
-/* Adicionar hover nos ícones de contato */
 .contact-info span a:hover i {
-    color: #25d366; /* Cor do ícone WhatsApp ao passar o mouse */
+    color: #25d366;
 }
 
 .contact-info span a:hover i.fa-instagram {
-    color: #C13584; /* Cor do ícone Instagram ao passar o mouse */
+    color: #C13584;
 }
 
-
-
-/* Menu */
 .menu-bar {
-    background-color: #2e2828; /* Cor neutra para o menu */
-    padding: 15px 0;
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
 }
 
 .menu-bar ul {
-    display: flex; /* Flex para garantir que os itens fiquem lado a lado */
-    justify-content: center; /* Centraliza os itens */
-    gap: 20px; /* Espaçamento entre os itens */
-    padding: 0;
     list-style: none;
-}
-
-.menu-bar ul li {
-    display: inline;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .menu-bar ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px; /* Aumentando o tamanho da fonte */
+    font-size: 18px;
+}
+
+.menu-bar ul li a:hover {
+    color: #dbdbdb;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo img {
+        margin: 0 auto 10px;
+        height: 60px; /* Ajusta a altura da logo */
+    }
+
+    .contact-info {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .menu-bar ul {
+        flex-direction: column; /* Torna o menu vertical */
+        gap: 10px;
+    }
+
+    .menu-bar ul li a {
+        font-size: 16px; /* Reduz o tamanho da fonte no menu */
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar {
+        padding: 10px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .contact-info {
+        font-size: 12px;
+    }
+
+    .menu-bar ul li a {
+        font-size: 14px;
+    }
 }
 
 .menu-bar ul li a:hover {
