@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Auto Guincho</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="logo">
+                <img src="42 9967-6642 (1).png" alt="Logo da Empresa">
+            </div>
+            <div class="contact-info">
+                 <!-- Número -->
+            <span><i class="fas fa-phone-alt"></i> (42) 99967-6642</span>
+            <!-- Instagram -->
+            <span><a href="https://www.instagram.com/eliteautoguincho" target="_blank"><i class="fab fa-instagram"></i> eliteautoguincho</a></span>
+            <!-- Email -->
+            <span><i class="fas fa-envelope"></i> <a href="mailto:secchiedamiani@gmail.com?subject=Referente ao guincho &body=Solicitamos por meio do site">contato@eliteautoguincho.com.br</a></span>
+            <!-- WhatsApp -->
+            <span><a href="https://wa.me/5542999676642" target="_blank"><i class="fab fa-whatsapp"></i> (42) 99967-6642</a></span>
+            </div>
+        </div>
+        <nav class="menu-bar">
+            <ul>
+                <li><a href="#guincho">Guincho</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#">Contrate já</a></li>
+                
+                
+            </ul>
+        </nav>
+    </header>
+    <!--slider de imagens-->
+    <div class="slidti">
+        <h1> Galeria de fotos</h1>
+    </div>
+    <div class="slider">
+        <button class="slider-nav prev" onclick="prevImage()">&#10094;</button>
+        <button class="slider-nav next" onclick="nextImage()">&#10095;</button>
+        <img src="WhatsApp Image 2024-11-28 at 14.51.34.jpeg" alt="Imagem 1" class="active">
+        <img src="WhatsApp Image 2024-11-28 at 14.51.32.jpeg" alt="Imagem 2">
+        <img src="WhatsApp Image 2024-11-28 at 14.51.39.jpeg" alt="Imagem 3">
+        <img src="WhatsApp Image 2024-11-28 at 14.51.40.jpeg" alt="Imagem 4">
+        <img src="WhatsApp Image 2024-11-28 at 14.51.30.jpeg" alt="Imagem 5">
+        <img src="WhatsApp Image 2024-11-28 at 14.31.43 (1).jpeg" alt="Imagem 6">
+        <img src="WhatsApp Image 2024-11-28 at 14.51.33 (1).jpeg" alt="Imagem 7">
+        <img src="WhatsApp Image 2024-11-28 at 14.51.37.jpeg" alt="Imagem ">
+        <img src="WhatsApp Image 2024-11-28 at 14.51.36.jpeg" alt="Imagem 3">
+        <img src="WhatsApp Image 2024-11-28 at 14.51.33.jpeg" alt="Imagem 3">
+        <img src="WhatsApp Image 2024-11-28 at 14.51.30 (1).jpeg" alt="Imagem 3">
+    
+    </div>
+    <div class="guincho-info" id="guincho">
+        <h2>Elite Auto Guincho: Atendimento 24 Horas, Rápido e Confiável!</h2>
+        <p>Estamos prontos para atender você em qualquer lugar do Brasil! Oferecemos serviços de guincho 24 horas por dia, 7 dias por semana, garantindo que você nunca fique na mão. Com um atendimento ágil, profissional e de alta qualidade, nossa equipe está preparada para atender veículos de todos os tipos e tamanhos.
+            Seja para emergências ou transporte de veículos, nossa missão é proporcionar segurança e tranquilidade, com preços acessíveis e um serviço de excelência. Conte com o Elite Auto Guincho para chegar onde você precisa, com rapidez e eficiência!</p>
+    </div>
+    <!-- Conteúdo Principal -->
+    <div class="container">
+        <h1>Calcule sua viagem</h1>
+
+        <!-- Formulário com seleção de estados e cidades -->
+        <div class="form-container">
+            <div class="form-card">
+                <form id="distance-form">
+                    <div class="form-group">
+                        <label for="origin-state">Origem</label>
+                        <div class="state-city-group">
+                            <select id="origin-state" class="state-select">
+                                <option value="">UF</option>
+                            </select>
+                            <select id="origin-city" class="city-select">
+                                <option value="">Cidade</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="destination-state">Destino</label>
+                        <div class="state-city-group">
+                            <select id="destination-state" class="state-select">
+                                <option value="">UF</option>
+                            </select>
+                            <select id="destination-city" class="city-select">
+                                <option value="">Cidade</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="button" id="calculate" class="btn-calculate">Calcular</button>
+                    <div id="result" class="result"></div>
+                </form>
+            </div>
+        </div>
+        
+        
+
+        <!-- Mapa Google Maps -->
+        <div id="map" style="height: 500px; width: 100%;"></div>
+
+        <!-- Seções adicionais -->
+        <div class="additional-sections">
+            <div class="section" id="sobre">
+                <h2>Sobre</h2>
+                <p>Elite Auto Guincho é uma empresa especializada em serviços de guincho e transporte de veículos em todo o Brasil. Com mais de 10 anos de atuação no mercado, temos como missão proporcionar um atendimento de excelência, garantindo rapidez, segurança e confiabilidade para nossos clientes.
+
+                    Nossa equipe é formada por profissionais altamente capacitados e equipamentos modernos, prontos para atender qualquer necessidade, seja de dia ou de noite. Oferecemos um serviço 24 horas, para que você tenha a tranquilidade de contar conosco sempre que precisar.
+                    
+                    Atendemos em diversas situações: desde emergências na estrada até o transporte de veículos para oficinas ou outros destinos. Trabalhamos com agilidade, para que seu veículo chegue ao destino com segurança e no menor tempo possível.
+                    
+                    Na Elite Auto Guincho, você pode confiar no compromisso com a qualidade, no atendimento rápido e eficaz e no melhor custo-benefício do mercado. Estamos sempre prontos para ajudar em qualquer lugar do Brasil, oferecendo soluções rápidas e confiáveis para o transporte de veículos.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+        
+            <p>
+                <a href="tel:+5599999999999">Telefone: (42) 99967-6642</a> | 
+                <a href="mailto:contato@eliteautoguincho.com">E-mail: contato@eliteautoguincho.com</a>
+            </p>
+            <p>R QUINZE DE NOVEMBRO, 3050, SÃO FRANCISCO - LARANJEIRAS DO SUL/PR</p>
+            <p>
+                Siga-nos: 
+                <a href="https://www.facebook.com/eliteesteticaautomotivalds" target="_blank">Facebook</a> | 
+                <a href="https://www.instagram.com/eliteautoguincho" target="_blank">Instagram</a> | 
+                <a href="https://wa.me/5542999676642" target="_blank">WhatsApp</a>
+            </p>
+            <p>&copy; 2024 SD Contabilidade e Assessoria Empresarial. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvuA36ujhDvGjVM_qvpLTiIVwYt2v9xzU" ></script>
+</body>
+</html>
